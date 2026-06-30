@@ -1,0 +1,36 @@
+
+<%- include('../cabecalho.ejs')%>
+<main class="container">
+        <a href="/categoria/lst" class="back-link">← Voltar para lista</a>
+
+        <div class="form-container">
+            <h2>Cadastrar Nova Categoria</h2>
+            
+            <form method="post" >
+                <div class="form-group">
+                    <label for="nome">Nome</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        
+                    >
+                <div class="form-group">
+                    <label for="duracao">Descrição</label>
+                    <input 
+                        type="text" 
+                        id="descricao" 
+                        name="descricao" 
+                        
+                    >
+                </div>
+
+
+                <div class="form-buttons">
+                    <button type="submit" class="btn btn-success">Cadastrar</button>
+                    <a href="/categoria/lst" class="btn btn-secondary">Cancelar</a>
+                </div>
+            </form>
+        </div>
+    </main>
+<%- include('../rodape.ejs')%>

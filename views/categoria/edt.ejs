@@ -1,0 +1,28 @@
+<%-include('../cabecalho.ejs')%>
+ <header>
+        <h3>Editar Categoria</h3>
+      </header>
+      <div class="content">
+        <form id="form-instrumento" method="post" autocomplete="off" >
+          <div class="grid">
+            <div>
+              <label for="nome">ID da Categoria</label>
+              <input id="id" value="<%=categoria.id%>" name="id" type="text" required>
+            </div>
+            <div>
+              <label for="nome">Nome da Categoria</label>
+              <input id="nome" value="<%=categoria.nome%>" name="nome" type="text" required>
+            </div>
+            <div>
+              <label for="nome">Descrição da Categoria</label>
+              <input id="nome" value="<%=categoria.descricao%>" name="descricao" type="text" required>
+            </div>
+           <div class="field-help">Os campos com * são obrigatórios.</div>
+          <footer>
+            <a type="button" class="btn ghost" id="btn-cancelar" href="/categoria/lst">Cancelar</a>
+            <button type="submit" class="btn primary">Editar Categoria</button>
+          </footer>
+        </form>
+      </div>
+
+  <%-include('../rodape.ejs')%>

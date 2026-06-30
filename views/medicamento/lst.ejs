@@ -1,0 +1,44 @@
+
+<%- include('../cabecalho.ejs')%>
+
+    <main class="container">
+        <div class="page-header">
+            <h2>Lista de Medicamentos</h2>
+            <a href="/medicamento/add" class="btn btn-success">+ Novo Medicamento</a>
+        </div>
+<form method="post">
+ <input type="text" name="pesquisar" placeholder="Nome do Medicamento">
+ <input type="submit" value="Buscar">
+</form>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Fabricante</th>
+                        <th>Preço</th>
+                        <th>É Controlado?</th>
+                        <th>Quantidade</th>
+                        <th>Ações</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <%medicamentos.forEach(medicamento => {%>
+                    <tr>
+                        <td><%=medicamento.nome%></td>
+                        <td><%=medicamento.fabricante%></td>
+                        <td><%=medicamento.preco%></td>
+                        <td><%=medicamento.controlado%></td>
+                        <td><%=medicamento.quantidade%></td>
+                        <td><a href="/medicamento/del/<%=medicamento.id%>" class="link">Excluir</a></td>
+                        <td><a href="/medicamento/edt/<%=medicamento.id%>" class="link">Editar</a></td>
+                    </tr>
+                    <%})%>
+                    
+                </tbody>
+            </table>
+        </div>
+    </main>
+
+<%- include('../rodape.ejs')%>
